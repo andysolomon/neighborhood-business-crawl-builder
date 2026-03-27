@@ -1,15 +1,31 @@
 # Neighborhood Business Crawl Builder
 
-Local-first scaffold for the IdeaBrowser concept: **Themed neighborhood crawls that drive foot traffic to local businesses**.
+**Themed neighborhood crawls that drive foot traffic to local businesses.**
 
 ## Current Status
-- Project scaffolded with Bun + Vite + React + TypeScript.
-- Planning docs added for another LLM to implement feature-by-feature.
+- Tech stack confirmed: Next.js App Router + Convex + Clerk + shadcn/ui + Mapbox GL JS
+- 26 user stories created as GitHub Issues with Gherkin acceptance criteria
+- GitHub Project board: https://github.com/users/andysolomon/projects/9
+- CI/CD: semantic-release + GitHub Actions + branch protection
+- Implementation begins with Phase 0 (Foundation)
 
 ## Idea Snapshot
 - Visitors follow themed walking routes (coffee/bookshop, gallery trail, food tour).
-- QR/GPS check-ins capture route engagement and dwell-time signals.
-- Monetization: business subscriptions, per-route consumer pricing, sponsorships.
+- QR check-ins capture route engagement and attribution signals.
+- Mobile-first web app with anonymous browsing and auth for check-ins.
+
+## Tech Stack
+| Layer | Technology |
+|-------|-----------|
+| Framework | Next.js App Router (TypeScript) |
+| Database | Convex (real-time document DB) |
+| Auth | Clerk |
+| UI | shadcn/ui + Tailwind CSS |
+| Maps | Mapbox GL JS + Turf.js |
+| Testing | Vitest + Playwright |
+| CI/CD | GitHub Actions + semantic-release |
+| Hosting | Vercel |
+| Package Manager | Bun |
 
 ## Core URLs
 - Idea: https://www.ideabrowser.com/idea/neighborhood-business-crawl-builder
@@ -23,6 +39,7 @@ Local-first scaffold for the IdeaBrowser concept: **Themed neighborhood crawls t
 ## Commands
 ```bash
 bun install
-bun dev
+bun run dev
 bun run build
+bun run test
 ```
