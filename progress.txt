@@ -1,0 +1,34 @@
+[ ] Phase 1 - App Foundation
+[ ] #1  [NCB-0001] Set up Supabase project and environment templates (P0, M)
+[ ] #2  [NCB-0002] Create DB schema for users, districts, businesses, routes, stops, checkins (P0, L)
+[ ] #3  [NCB-0003] Implement auth + role model (visitor/business/district admin) (P0, M)
+[ ] #4  [NCB-0004] Build app shell, nav, and route-level error boundaries (P1, S)
+
+[ ] Phase 2 - Route Discovery Experience
+[ ] #5  [NCB-0005] Build public route list with search + theme filters (P0, M)
+[ ] #6  [NCB-0006] Implement route detail page with map + ordered stops (P0, L)
+[ ] #7  [NCB-0007] Build mobile route runner mode with progress tracker (P0, M)
+[ ] #8  [NCB-0008] Add route card SEO metadata and share previews (P2, S)
+
+[ ] Phase 3 - Check-ins + Attribution
+[ ] #9  [NCB-0009] Create QR token model and signed check-in endpoint (P0, M)
+[ ] #10 [NCB-0010] Implement stop check-in UI with duplicate prevention (P0, M)
+[ ] #11 [NCB-0011] Persist check-in events and route completion sessions (P0, M)
+[ ] #12 [NCB-0012] Build analytics widgets: completion, drop-off, revisit rate (P1, M)
+
+[ ] Phase 4 - Business + District Console
+[ ] #13 [NCB-0013] Business profile CRUD with photo/logo uploads (P1, M)
+[ ] #14 [NCB-0014] Route builder with stop ordering and publish toggles (P0, L)
+[ ] #15 [NCB-0015] District campaign dashboard and date-range filters (P1, M)
+[ ] #16 [NCB-0016] Add permissions checks for all admin console routes (P0, M)
+
+[ ] Phase 5 - Monetization + Ops
+[ ] #17 [NCB-0017] Add subscription entities and feature gating (P1, M)
+[ ] #18 [NCB-0018] Implement sponsorship package management (P2, M)
+[ ] #19 [NCB-0019] Export campaign data as CSV and PDF (P2, M)
+
+[ ] Phase 6 - Hardening + Launch
+[ ] #20 [NCB-0020] Add unit + component tests for route/check-in flows (P1, M)
+[ ] #21 [NCB-0021] Add e2e tests for visitor and admin paths (P1, M)
+[ ] #22 [NCB-0022] Performance pass for map rendering and mobile layout (P0, M)
+[ ] #23 [NCB-0023] Production deploy checklist + rollback notes (P1, S)
