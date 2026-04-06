@@ -19,11 +19,6 @@ jobs:
       - name: Install dependencies
         run: bun install --frozen-lockfile
 
-      - name: Convex codegen
-        run: bunx convex codegen
-        env:
-          CONVEX_DEPLOYMENT: ${{ secrets.CONVEX_DEPLOYMENT }}
-
       - name: Lint
         run: bunx next lint
 
