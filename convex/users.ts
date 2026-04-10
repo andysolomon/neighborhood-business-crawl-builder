@@ -11,6 +11,20 @@ export const getByClerkId = query({
   },
 });
 
+/** Get the current authenticated user's Convex doc (reactive). */
+export const currentUser = query({
+  args: {},
+  handler: async (ctx) => {
+    const identity = await ctx.auth.getUserIdentity();
+    if (!identity) return null;
+
+    return await ctx.db
+      .query("users")
+      .withIndex("by_clerkId", (q) => q.eq("clerkId", identity.subject))
+      .unique();
+  },
+});
+
 /**
  * Lazy-sync fallback: look up user by Clerk identity, create if missing.
  * Called by the useRole() hook when a user is authenticated but may not
@@ -50,10 +64,6 @@ export const getOrCreateUser = mutation({
   },
 });
 
-/**
- * Upsert user from Clerk webhook payload.
- * Internal mutation — only callable from API routes, not from clients.
- */
 /**
  * Upsert user from Clerk webhook payload.
  * Called from the Next.js webhook route via ConvexHttpClient.
